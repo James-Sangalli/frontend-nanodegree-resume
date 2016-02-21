@@ -9,7 +9,7 @@ This is empty on purpose! Your code to build the resume will go here.
  $("#header").prepend(formattedName,formattedJob);
  
 var work = {
-	"Jobs": [{
+	"jobs": [{
 		"Title": "MOJ",
 		"date": 2015,
 		"location":"Wellington, NZ"
@@ -21,12 +21,14 @@ var work = {
 }
 
 var education = {
-	"Schools": [{
+	"schools": [{
 		"name": "WC",
-		"date": 2012
+		"date": 2012,
+		"location": "Wellington, New Zealand"
 	}, {
 		"name": "EDA",
-		"date": 2016
+		"date": 2016,
+		"location": "Wellington, New Zealand"
 	}]
 
 }
@@ -92,11 +94,11 @@ if (bio.skills.length > 0){
 
 
 function displayWork(){
-	for (var job in work.Jobs){
+	for (var job in work.jobs){
 	$("#workExperience").append(HTMLworkStart);
-	var formattedTitle = HTMLworkTitle.replace("%data%",work.Jobs[job].Title);
-	var formattedDate = HTMLworkDates.replace("%data%",work.Jobs[job].date);
-	var formattedLocation = HTMLlocation.replace("%data%",work.Jobs[job].location);
+	var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].Title);
+	var formattedDate = HTMLworkDates.replace("%data%",work.jobs[job].date);
+	var formattedLocation = HTMLlocation.replace("%data%",work.jobs[job].location);
 	var formattedData = formattedDate + formattedTitle;
 	$(".work-entry:last").append(formattedData);
    }
