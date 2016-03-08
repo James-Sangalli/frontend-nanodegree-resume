@@ -76,21 +76,17 @@ if (bio.skills.length > 0){
 	$("#skills").append(formatSkill);
 
 }
-/*
+
 	$("#header").append(HTMLmobile); 
 	$("#header").append(HTMLgithub);
-	$("#header").append(location);
 	
 	var mobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
 	$("#mobile").append(mobile);
 	
 	var git = HTMLgithub.replace("%data%",bio.contacts.github);
-	$("#github").append(github);
+	$("#github").append(git);
 
-	var location = HTMLlocation.replace("%data%", bio.contacts.location);
-	$("#location").append(location);
 
-*/
 
 
 function displayWork(){
@@ -143,20 +139,3 @@ projects.display();
 
 
 $("#mapDiv").append(googleMap);
-
-
-/*
-var formatSkill = {};
-
-	for (i = 0; i < bio.skills.length; i ++){
-		formatSkill = HTMLskills.replace("%data%",bio.skills[i]);
-		$("#skills").append(formatSkill);
-	}
-	*/
-	/*
-	for(var c in bio.skills){
-		var formatSkill = HTMLskills.replace("%data%",bio.skills[c]);
-		$("#skills").append(formatSkill);
-	}
-	*/
-	
